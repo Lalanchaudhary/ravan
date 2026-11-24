@@ -1,0 +1,528 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RAVAN STUDIO | 12% OFF</title>
+
+<meta name="description" content="Welcome to RAVAN STUDIO. Book your first session and get 12% OFF.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #050505;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+:root {
+    --red: #e50920;
+    --gold: #e6bd78;
+    --black: #050505;
+    --white: #ffffff;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #080808;
+    border-bottom: 1px solid #222;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--red);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-btn {
+    text-decoration: none;
+    background: var(--red);
+    color: white;
+    padding: 13px 23px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.nav-btn:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 650px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    background:
+    radial-gradient(ellipse at center, #271014 0%, #10090b 48%, #050505 100%);
+}
+
+/* Subtle patterns */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(229,9,32,.13);
+    border-radius: 50%;
+    box-shadow:
+    0 0 80px rgba(229,9,32,.12),
+    inset 0 0 80px rgba(229,9,32,.08);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: .12;
+    pointer-events: none;
+
+    background-image: radial-gradient(#e6bd78 1px, transparent 1px);
+    background-size: 35px 35px;
+
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    animation: fadeUp 1.2s ease;
+}
+
+/* STUDIO TEXT */
+
+.studio-tag {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 7px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(75px, 14vw, 155px);
+    font-weight: 900;
+    letter-spacing: 10px;
+    line-height: 1;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff 10%,
+        #d7d7d7 45%,
+        #8c8c8c 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 8px 20px rgba(229,9,32,.2));
+}
+
+.studio-name {
+    font-size: 15px;
+    color: var(--gold);
+    letter-spacing: 12px;
+    font-weight: 700;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+/* DIVIDER */
+
+.divider {
+    width: 150px;
+    height: 2px;
+    margin: 30px auto;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--red),
+        var(--gold),
+        transparent
+    );
+}
+
+/* DISCOUNT */
+
+.hero h2 {
+    font-size: clamp(65px, 11vw, 115px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--red);
+    text-shadow: 0 0 35px rgba(229,9,32,.3);
+    margin-top: 15px;
+}
+
+.hero h2 span {
+    color: var(--gold);
+}
+
+.offer-text {
+    font-size: 13px;
+    letter-spacing: 5px;
+    font-weight: 700;
+    color: #ddd;
+    margin-top: 20px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    margin-top: 40px;
+    padding: 17px 45px;
+
+    background: linear-gradient(135deg,#25d366,#078d42);
+    color: white;
+
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+    border: 1px solid #8cffb1;
+    border-radius: 50px;
+
+    box-shadow: 0 0 30px rgba(37,211,102,.25);
+    transition: .35s;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 0 45px rgba(37,211,102,.5);
+}
+
+.whatsapp-btn svg {
+    width: 23px;
+    height: 23px;
+    fill: white;
+}
+
+/* BOTTOM TEXT */
+
+.bottom-text {
+    margin-top: 35px;
+    font-size: 10px;
+    color: #888;
+    letter-spacing: 3px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #080808;
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.footer-logo {
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: var(--red);
+}
+
+.footer p {
+    color: #777;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+/* FLOATING WHATSAPP */
+
+.float-whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100;
+
+    background: #25d366;
+    color: white;
+
+    padding: 15px 22px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+
+    box-shadow: 0 5px 25px rgba(37,211,102,.3);
+    transition: .3s;
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.08);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-btn {
+        padding: 11px 15px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 60px 15px;
+    }
+
+    .hero::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero h1 {
+        letter-spacing: 5px;
+    }
+
+    .studio-tag {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .studio-name {
+        font-size: 12px;
+        letter-spacing: 8px;
+    }
+
+    .offer-text {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .whatsapp-btn {
+        padding: 15px 30px;
+        font-size: 13px;
+    }
+
+    .bottom-text {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .float-whatsapp {
+        right: 15px;
+        bottom: 15px;
+        padding: 13px 17px;
+        font-size: 11px;
+    }
+}
+
+@media(max-width:380px) {
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .hero h2 {
+        font-size: 60px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        RAVAN<span>.</span> STUDIO
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#offer">OFFER</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-btn">
+        BOOK NOW
+    </a>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="studio-tag">
+            ✦ PREMIUM STUDIO ✦
+        </div>
+
+        <h1>RAVAN</h1>
+
+        <div class="studio-name">
+            STUDIO
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 id="offer">
+            12% <span>OFF</span>
+        </h2>
+
+        <p class="offer-text">
+            ON YOUR FIRST BOOKING
+        </p>
+
+        <a
+        href="https://wa.me/918409121557?text=I%20WANT%20ID%20HERE.."
+        class="whatsapp-btn"
+        target="_blank"
+        rel="noopener noreferrer">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.5 0 .1 5.4.1 12c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7a12 12 0 0 0 5.8 1.5h.1c6.6 0 12-5.4 12-12 0-3.2-1.3-6.1-3.7-8.3ZM12.1 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.3-.4a9.7 9.7 0 0 1-1.5-5.2 9.9 9.9 0 1 1 9.9 9.8Zm5.4-7.4c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.8.9-.9 1.1-.2.2-.4.2-.7.1-.3-.2-1.2-.5-2.3-1.5-.8-.7-1.3-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.6-1-2.1-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.1 1.1-1.1 2.5s1.1 2.8 1.3 3c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.3-.6-.5Z"/>
+            </svg>
+
+            BOOK NOW
+
+        </a>
+
+        <div class="bottom-text">
+            YOUR MOMENTS · OUR PASSION
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer" id="contact">
+
+    <div class="footer-logo">
+        RAVAN<span>.</span> STUDIO
+    </div>
+
+    <p>
+        PREMIUM PHOTOGRAPHY & CREATIVE STUDIO
+    </p>
+
+    <p>
+        © 2026 RAVAN STUDIO. ALL RIGHTS RESERVED.
+    </p>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+href="https://wa.me/918409121557?text=I%20WANT%20ID%20HERE.."
+class="float-whatsapp"
+target="_blank"
+rel="noopener noreferrer">
+
+    ☎ BOOK NOW
+
+</a>
+
+</body>
+</html>
